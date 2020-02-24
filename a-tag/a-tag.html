@@ -19,13 +19,16 @@
             <ul>
                 <li class="link"><a href="../float/float.html">css float徹底解説</a></li>
                 <li class="link"><a href="nature/nature-autum-river.jpg">配下フォルダ内の画像へ飛ぶ</a></li>
+                <li class="link"><a href="#conclusion">ページ内アンカーリンク</a></li>
                 <li class="link"><a href="https://www.bish.tokyo/"><img src="images/bish.jpg" alt="Japan" width="200px" height="120px" title="BiSHオフィシャルページへジャンプ"></a></li>
                 <li class="link"><a href="https://www.youtube.com/watch?v=qrtKLNTB71c"><img src="images/hige.jpg" alt="Japan" width="200px" height="120px" title="youtubeへジャンプ"></a></li>
+            
             </ul>
         </div>
         <div class="explain">
-            デフォルトのaタグ(画像はtitleタグ設定済み)<br>
-            ①内部リンク、②配下画像、③外部リンク、④外部リンク(youtube)
+            ・デフォルトのaタグ(画像はtitleタグ設定済み)<br>
+            ・ページ内リンクは　href="♯id名" <br>
+            ・①内部リンク、②配下画像、③外部リンク、④外部リンク(youtube)
         </div>
     </div>
 
@@ -35,6 +38,7 @@
             <ul>
                 <li class="link"><a class="a1" href="../float/float.html">css float徹底解説</a></li>
                 <li class="link"><a class="a1" href="nature/nature-autum-river.jpg">配下フォルダ内の画像へ飛ぶ</a></li>
+                <li class="link"><a class="a1" href="#conclusion">ページ内アンカーリンク</a></li>
                 <li class="link"><a class="a1" href="https://www.bish.tokyo/"><img src="images/bish.jpg" alt="Japan" width="200px" height="120px" title="BiSHオフィシャルページへジャンプ"></a></li>
                 <li class="link"><a class="a1" href="https://www.youtube.com/watch?v=qrtKLNTB71c"><img src="images/hige.jpg" alt="Japan" width="200px" height="120px" title="youtubeへジャンプ"></a></li>
             </ul>
@@ -51,6 +55,7 @@
             <ul>
                 <li class="link"><a class="a2" href="../float/float.html">css float徹底解説</a></li>
                 <li class="link"><a class="a2" href="nature/nature-autum-river.jpg">配下フォルダ内の画像へ飛ぶ</a></li>
+                <li class="link"><a class="a2" href="#conclusion">ページ内アンカーリンク</a></li>
                 <li class="link"><a class="a3" href="https://www.bish.tokyo/"><img src="images/bish.jpg" alt="Japan" width="200px" height="120px" title="BiSHオフィシャルページへジャンプ"></a></li>
                 <li class="link"><a class="a4" href="https://www.youtube.com/watch?v=qrtKLNTB71c"><img src="images/hige.jpg" alt="Japan" width="200px" height="120px" title="youtubeへジャンプ"></a></li>
             </ul>
@@ -107,8 +112,8 @@
             <ul>
                 <li class="link"><a class="elipse hover" href="../float/float.html">css float徹底解説</a></li>
                 <li class="link"><a class="square hover" href="nature/nature-autum-river.jpg">配下フォルダ内の画像へ飛ぶ</a></li>
-                <li class="link"><a class="a3" href="https://www.bish.tokyo/"><img class="elipse" src="images/bish.jpg" alt="Japan" width="200px" height="120px" title="BiSHオフィシャルページへジャンプ"></a></li>
-                <li class="link"><a class="a4" href="https://www.youtube.com/watch?v=qrtKLNTB71c"><img class="circle" src="images/hige.jpg" alt="Japan" width="200px" height="120px" title="youtubeへジャンプ"></a></li>
+                <li class="link"><a class="a3" href="https://www.bish.tokyo/"><img class="circle" src="images/bish.jpg" alt="Japan" width="200px" height="120px" title="BiSHオフィシャルページへジャンプ"></a></li>
+                <li class="link"><a class="a4" href="https://www.youtube.com/watch?v=qrtKLNTB71c"><img class="elipse2" src="images/hige.jpg" alt="Japan" width="200px" height="120px" title="youtubeへジャンプ"></a></li>
             </ul>
         </div>
         <pre class="explain">
@@ -129,8 +134,24 @@
     ※画像を丸くする
     .circle {
         border-radius: 50%;
+        width: 150px;
+        height: 150px;
+    }
+
+    ※楕円の画像
+    .elipse {
+        border-radius: 50%;
     }
         </pre>
+    </div>
+    <div id="conclusion">
+        <h2>結論</h2>
+        <div>
+            ・アンダーラインを消す text-decoration: none;<br>
+            ・マウスオン時の設定 a:hover { } ※:の前後はスペースなし <br>
+            ・マウスオン時imgの設定 a:hover img{ } <br>
+            ・訪問後の設定 a:visited { }　※変更できるのはcolorのみ　(border-color含む)
+        </div>
     </div>
 
 </body>
