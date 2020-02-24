@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>float</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="container">
+    <h1>css float</h1>
+    
+    <div class="box">
+    <h2>(1)テキストの回り込み</h2>
+    <div class="float_box-wrap">
+        <div class="float_box">float: left;</div>
+        これから歌う曲の内容は僕の頭の中のこと
+        主演はもちろん君で
+        僕は助演で監督でカメラマン
+        目の奥にあるフィルムで作る映画の話さ Ah
+
+        くだらないなと笑ったんなら掴みはそれで万事OK！
+        呆れていないでちょっと待って
+        きっと気に入ってもらえると思うな
+        ここまでのダイジェストを少しだけ見せるよ
+
+        初めて喧嘩した夜の涙
+        個人的に胸が痛むけれど
+        そのまま見続けよう
+        ごめんねと言って仲直りして手を握って…
+        ほら、ここで君が笑うシーンが見どころなんだからさ Ah
+        </div>
+        <pre class="exampleCode">
+    float:  left;  
+    ※テキストはベタ打ち
+        </pre>
+    </div>
+        
+    <div class="box">
+        <h2>(2)テキストもfloat</h2>
+        <div class="float_box-wrap">
+            <div class="float_box">float: left;</div>
+            <div class="float_text">
+                これから歌う曲の内容は僕の頭の中のこと
+                主演はもちろん君で
+                僕は助演で監督でカメラマン
+                目の奥にあるフィルムで作る映画の話さ Ah
+        
+                くだらないなと笑ったんなら掴みはそれで万事OK！
+                呆れていないでちょっと待って
+                きっと気に入ってもらえると思うな
+                ここまでのダイジェストを少しだけ見せるよ
+        
+                初めて喧嘩した夜の涙
+                個人的に胸が痛むけれど
+                そのまま見続けよう
+                ごめんねと言って仲直りして手を握って…
+                ほら、ここで君が笑うシーンが見どころなんだからさ Ah
+            </div>
+        </div>
+        <div class="exampleCode">
+             テキストをdivで囲みfloat:left;
+        </div>
+    </div>
+
+    <div class="box">
+        <h2>(3) 親要素の中身すべてfloat</h2>
+        <div class="parent">親要素
+            <div class="float_box">float:  left;</div>
+            <div class="float_box">float:  left;</div>
+        </div>
+        <pre class="exampleCode">
+    ※中身のdivがfloatしたため、親要素の高さがなくなった。
+    ※paddingの30px分だけ背景色がついている
+
+    .parent {
+        background-color: lightgray;
+        padding: 30px;
+       </pre>
+    </div>
+
+    <div class="box">
+        <h2>(4) 親要素の中に要素が残る　patern1～前の要素がfloat～</h2>
+        <div class="parent">親要素
+            <div class="float_box">float:  left;</div>
+            <div class="no_float_box">floatしない</div>
+        </div>
+        <div class="exampleCode">
+            ※親要素の中に要素が残るので、高さが消えない。<br>padding+中の要素の高さ
+       </div>
+    </div>
+
+    <div class="box">
+        <h2>(5) 親要素の中に要素が残る　patern2～後ろの要素がfloat～</h2>
+        <div class="parent">親要素
+            <div class="no_float_box">floatしない</div>
+            <div class="float_box">float:  left;</div>
+        </div>
+        <div class="exampleCode">
+            ※親要素の中に要素が残るので、高さが消えない。<br>padding+中の要素の高さ<br>
+            ※親要素は飛び越えるが、兄弟要素は飛び越えない
+       </div>
+    </div>
+
+    <div class="box">
+        <h2>(6) どちらもfloatしない</h2>
+        <div class="parent">親要素
+            <div class="no_float_box">floatしない</div>
+            <div class="no_float_box">floatしない</div>
+        </div>
+        <div class="exampleCode">
+            ※親要素のテキストに対し、回り込みが発生していない
+       </div>
+    </div>
+
+    <hr>
+    <div class="box">
+        <h2>(回避法１) 親要素もfloatする</h2>
+        <div class="parent2">親要素
+            <div class="float_box">float:  left;</div>
+            <div class="float_box">floatしない</div>
+        </div>
+        <div class="exampleCode">
+            ※親要素と子要素の次元が同じになる。(浮く)<br>
+            　→ 親要素の中に子要素が入る<br>
+       </div>
+    </div>
+
+    <div class="box">
+        <h2>(回避法２) 親要素にoverflowを適用 ~hidden~</h2>
+        <div class="parent3">親要素
+            <div class="float_box">float:  left;</div>
+            <div class="float_box">floatしない</div>
+        </div>
+        <div class="exampleCode">
+            ※overflowは「visible以外は中の要素の高さを加味する」性質を使用<br>
+            hiddenの場合<br>
+            ※「あえてはみ出したい要素がある場合に使えない」
+       </div>
+    </div>
+
+    <div class="box">
+        <h2>(回避法２) 親要素にoverflowを適用 ~scroll.(auto)~</h2>
+        <div class="parent4">親要素
+            <div class="float_box">float:  left;</div>
+            <div class="float_box">floatしない</div>
+        </div>
+        <div class="exampleCode">
+            ※overflowは「visible以外は中の要素の高さを加味する」性質を使用<br>
+            scrollの場合
+            ※hiddenかautoが一般的
+       </div>
+    </div>
+
+    <div class="box">
+        <h2>(回避法３) 疑似要素を使う～clearfix～</h2>
+        <div class="parent clearfix">親要素
+            <div class="float_box">float:  left;</div>
+            <div class="float_box">floatしない</div>
+        </div>
+        <pre class="exampleCode">
+    ※親要素へのfloatや、overflowと違い、レイアウト崩れが発生しない
+    ※クラスclearfixを、floatを使用している親要素につける
+    ※:after　contentプロパティと一緒に使うことで、ボックス内の末尾に新たなインラインボックスをつくる
+    ※:afterにより生成したボックスに clear:both;　を適用する
+    ※インライン要素をブロック要素にする　display: block;
+
+    .clearfix:after {
+        content: "";         /* 擬似要素を実体化 */
+        clear: both;        /* floatを解除する */
+        display: block;     /* ブロック要素にする */
+    }
+    
+       </pre>
+    </div>
+
+    <br>
+    <br>
+    <h2>&lt;結論&gt;</h2>
+    <div id="conclusion">
+        <span class="bold">float解除の優先順位</span><br>
+        (1)親要素にclearfix (class) <br>
+        (2)親要素にoverflow (プロパティ) <br>
+        (3)親要素にfloat　(プロパティ) <br>
+
+    </div>
+
+
+    
+</div>
+
+</body>
+</html>

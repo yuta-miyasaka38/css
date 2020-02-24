@@ -1,0 +1,84 @@
+#container {
+    max-width: 70%;
+}
+
+.exampleCode{
+    border:solid 0.1em;
+    border-color: goldenrod;
+    margin: 40px 0;
+    max-width: 90%;
+    min-width: 200px;
+    padding-top:10px;
+    overflow: auto;
+    clear: both;
+}
+
+#conclusion{
+    border:solid 0.4em;
+    border-color: rgb(218, 32, 32);
+    max-width: 90%;
+    min-width: 200px;
+    padding:30px;
+    overflow: auto;
+    clear: both;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.float_box {
+    padding: 58px 10px;         /* 箱の大きさ調整 */
+    width: 120px;               /* 箱の大きさ調整 */
+    text-align: center;         /* テキストをセンタリング */
+    background-color: rgba(255, 244, 181, 0.966);    /* 背景色設定 */
+    float:  left;               /* 要素を右に回り込ませる */
+}
+
+.float_text {
+    float: left;                /* 要素を右に回り込ませる */
+    width: calc(100% - 140px);  /* 文字の箱の大きさ調整 */
+}
+
+/* 親要素の中身すべてfloat */ 
+.parent {
+    background-color: rgb(221, 221, 221);   
+    padding: 30px;
+}
+
+/* 親要素の中に要素が残る場合 */ 
+.no_float_box {
+    padding: 58px 10px;         /* 箱の大きさ調整 */
+    width: 120px;               /* 箱の大きさ調整 */
+    text-align: center;         /* テキストをセンタリング */
+    background-color: rgba(255, 244, 181, 0.966);    /* 背景色設定 */
+}
+
+/* 親要素もfloat */ 
+.parent2 {
+    background-color: rgb(221, 221, 221);   
+    padding: 30px;
+    float: left;
+}
+
+/* 親要素をoverflow(hidden) */ 
+.parent3 {
+    background-color: rgb(221, 221, 221);   
+    padding: 30px;
+    overflow: hidden;
+}
+
+/* 親要素をoverflow(scroll) */ 
+.parent4 {
+    background-color: rgb(221, 221, 221);   
+    padding: 30px;
+    overflow: scroll;
+}
+
+
+/* 疑似要素を使って高さを出す */
+.clearfix:after {
+    content: "";         /* 擬似要素を実体化 */
+    clear: both;        /* floatを解除する */
+    display: block;     /* ブロック要素にする */
+}
