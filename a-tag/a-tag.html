@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css for a-tag</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <h1>css for aタグ</h1>
+    </div>
+
+    <div class="box">
+        <h2>(1) defaultのaタグ</h2>
+        <div class="content">
+            <ul>
+                <li class="link"><a href="../float/float.html">css float徹底解説</a></li>
+                <li class="link"><a href="nature/nature-autum-river.jpg">配下フォルダ内の画像へ飛ぶ</a></li>
+                <li class="link"><a href="https://www.bish.tokyo/"><img src="images/bish.jpg" alt="Japan" width="200px" height="120px" title="BiSHオフィシャルページへジャンプ"></a></li>
+                <li class="link"><a href="https://www.youtube.com/watch?v=qrtKLNTB71c"><img src="images/hige.jpg" alt="Japan" width="200px" height="120px" title="youtubeへジャンプ"></a></li>
+            </ul>
+        </div>
+        <div class="explain">
+            デフォルトのaタグ(画像はtitleタグ設定済み)<br>
+            ①内部リンク、②配下画像、③外部リンク、④外部リンク(youtube)
+        </div>
+    </div>
+
+    <div class="box">
+        <h2>(2) under-line削除、色変更 </h2>
+        <div class="content">
+            <ul>
+                <li class="link"><a class="a1" href="../float/float.html">css float徹底解説</a></li>
+                <li class="link"><a class="a1" href="nature/nature-autum-river.jpg">配下フォルダ内の画像へ飛ぶ</a></li>
+                <li class="link"><a class="a1" href="https://www.bish.tokyo/"><img src="images/bish.jpg" alt="Japan" width="200px" height="120px" title="BiSHオフィシャルページへジャンプ"></a></li>
+                <li class="link"><a class="a1" href="https://www.youtube.com/watch?v=qrtKLNTB71c"><img src="images/hige.jpg" alt="Japan" width="200px" height="120px" title="youtubeへジャンプ"></a></li>
+            </ul>
+        </div>
+        <pre class="explain">
+    text-decoration: none;
+    color: red;
+        </pre>
+    </div>
+
+    <div class="box">
+        <h2>(3) カーソルonでデザイン変更 ~a:hover~</h2>
+        <div class="content">
+            <ul>
+                <li class="link"><a class="a2" href="../float/float.html">css float徹底解説</a></li>
+                <li class="link"><a class="a2" href="nature/nature-autum-river.jpg">配下フォルダ内の画像へ飛ぶ</a></li>
+                <li class="link"><a class="a3" href="https://www.bish.tokyo/"><img src="images/bish.jpg" alt="Japan" width="200px" height="120px" title="BiSHオフィシャルページへジャンプ"></a></li>
+                <li class="link"><a class="a4" href="https://www.youtube.com/watch?v=qrtKLNTB71c"><img src="images/hige.jpg" alt="Japan" width="200px" height="120px" title="youtubeへジャンプ"></a></li>
+            </ul>
+        </div>
+        <pre class="explain">
+    ①「:hover{ }でマウスオン時の処理」
+    ②「:hover img{ } img画像にマウスオンした時の処理」
+    ※テキストは緑色、太字にする
+    .a2:hover {
+        color: green;
+        font-size: 2em;
+        font-weight: bold;
+      }
+
+    ※画像1枚目は緑の枠線をつける
+    .a3:hover img {
+        border: solid 10px green;
+    }
+
+    ※画像2枚目は、半透明にし、拡大
+    .a4:hover img {
+        opacity: 0.5;
+        width: 400px;
+        height: 250px;
+    }
+        </pre>
+    </div>
+
+    <div class="box">
+        <h2>(4) クリック前後で変化 ~a:visited~ </h2>
+        <div class="content">
+            <ul>
+                <li class="link"><a class="a5" href="../float/float.html">css float徹底解説</a></li>
+                <li class="link"><a class="a5" href="nature/nature-autum-river.jpg">配下フォルダ内の画像へ飛ぶ</a></li>
+                <li class="link"><a class="a3 a6" href="https://www.bish.tokyo/"><img src="images/bish.jpg" alt="Japan" width="200px" height="120px" title="BiSHオフィシャルページへジャンプ"></a></li>
+                <li class="link"><a class="a4 a7" href="https://www.youtube.com/watch?v=qrtKLNTB71c"><img src="images/hige.jpg" alt="Japan" width="200px" height="120px" title="youtubeへジャンプ"></a></li>
+            </ul>
+        </div>
+        <pre class="explain">
+    ※ a:visited 効くのは、テキストの色、枠線の色のみ (colorのみ)
+    ※ hoverの後に書く
+    ※ imgの枠線の色を変える(*hoverで枠線が表示される仕様になっていること。visitedでは枠線表示できない)
+        a:visited img{
+            border-color: silver;
+        }
+    ※１枚目の画像は、訪問後枠線の色が緑→オレンジになる
+    ※ opacity, width, border など color以外は効かない
+        </pre>
+    </div>
+
+    <div class="box">
+        <h2>(5) リンクボタン作成 css </h2>
+        <div class="content">
+            <ul>
+                <li class="link"><a class="elipse hover" href="../float/float.html">css float徹底解説</a></li>
+                <li class="link"><a class="square hover" href="nature/nature-autum-river.jpg">配下フォルダ内の画像へ飛ぶ</a></li>
+                <li class="link"><a class="a3" href="https://www.bish.tokyo/"><img class="elipse" src="images/bish.jpg" alt="Japan" width="200px" height="120px" title="BiSHオフィシャルページへジャンプ"></a></li>
+                <li class="link"><a class="a4" href="https://www.youtube.com/watch?v=qrtKLNTB71c"><img class="circle" src="images/hige.jpg" alt="Japan" width="200px" height="120px" title="youtubeへジャンプ"></a></li>
+            </ul>
+        </div>
+        <pre class="explain">
+    ※楕円リンク
+     .elipse{
+        border-radius: 20px; ※20pxがポイント
+        background-color: skyblue;
+        text-decoration: none;
+        color: white;
+        padding: 5px 20px;
+        font-weight: bold;
+        font-family: 'Avenir', 'Arial'; ※Avenirがカッコいいフォント
+        display: inline-block; ※marginを適用するため、inline-blockに変更
+        margin: 5px;
+    }
+
+    ※画像には(3)の a:hover img {}を適用
+    ※画像を丸くする
+    .circle {
+        border-radius: 50%;
+    }
+        </pre>
+    </div>
+
+</body>
+</html>

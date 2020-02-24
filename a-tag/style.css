@@ -1,0 +1,86 @@
+li{
+    list-style: none;
+}
+
+.explain {
+    border: 0.1em solid;
+    border-color: goldenrod;
+    margin: 30px;
+    margin-bottom: 60px;
+    padding: 20px;
+    max-width: 90%;
+    min-width: 200px;
+    font-size: 16px;
+    overflow: auto;
+}
+
+.a1{
+    text-decoration: none;
+    color: red;
+}
+
+/* hover */
+.a2:hover {
+    color: rgb(0, 173, 23);
+    font-size: 2em;/*文字サイズ2倍*/
+    font-weight: bold;
+}
+
+
+.a3:hover img {
+    border: solid 40px green;
+}
+
+.a4:hover img {
+    opacity: 0.5;
+    width: 400px;
+    height: 250px;
+  }
+
+
+/* visited */
+.a5:visited {
+    color: silver;
+}
+
+.a6:visited img{
+    border: 5px dashed; /* 効かない */
+    border-color: orange;
+}
+
+.a7:visited img {
+    opacity: 1;  /* 効かない */
+}
+
+
+/* 形状を変える */
+.elipse{
+    border-radius: 20px;
+    background-color: skyblue;
+    text-decoration: none;
+    color: white;
+    padding: 5px 20px;
+    font-weight: bold;
+    font-family: 'Avenir', 'Arial';
+    display: inline-block;
+    margin: 5px;
+}
+
+.hover:hover {
+    background-color:silver;
+}
+
+.square{
+    background-color: rgb(32, 119, 218);
+    text-decoration: none;
+    color: white;
+    padding: 5px 20px;
+    font-weight: bold;
+    font-family: 'Avenir', 'Arial';
+    display: inline-block;
+    margin: 5px;
+}
+
+.circle {
+    border-radius: 50%;
+}
